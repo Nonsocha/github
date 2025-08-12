@@ -1,10 +1,10 @@
-// server.js (or app.js)
-const express = require('express');
-const app = express();
+const app = require('./server');
+const PORT = process.env.PORT || 3000;
 
-// Add this root route handler
-app.get('/', (req, res) => {
-  res.send('Hello from Express server!'); // Make sure to include this
+
+// Important: listen on 0.0.0.0 so EC2 can serve requests externally
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
 
 module.exports = app; // Important for testing
