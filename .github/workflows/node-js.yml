@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 2] # You can add 14.x if you want multiple versions
+        node-version: [18.x, 20.x] # You can add 14.x if you want multiple versions
 
     steps:
       - name: Checkout code
