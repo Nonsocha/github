@@ -1,10 +1,7 @@
-const express = require('express');
-const app = express();
+const app = require('./server'); // Or your Express app
+const PORT = process.env.PORT || 3000;
 
-app.use(express.static('public'));
-
-app.get('/', (req, res) => {
-  res.status(200).send('Hello from Express server!');
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
-module.exports = app;
