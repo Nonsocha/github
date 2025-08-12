@@ -1,7 +1,12 @@
-const app = require('./server'); // Or your Express app
-const PORT = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on port ${PORT}`);
+// Middleware, routes, etc.
+app.use(express.json());
+
+// Example route
+app.get('/', (req, res) => {
+  res.send('Hello World');
 });
 
+module.exports = app;
