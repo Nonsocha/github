@@ -1,10 +1,10 @@
+// server.js (or app.js)
 const express = require('express');
 const app = express();
 
-app.use(express.static('public'));
-
+// Add this root route handler
 app.get('/', (req, res) => {
-  res.status(200).send('Hello from Express server!');
+  res.send('Hello from Express server!'); // Make sure to include this
 });
 
-module.exports = app;
+module.exports = app; // Important for testing
