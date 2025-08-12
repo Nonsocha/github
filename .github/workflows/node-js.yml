@@ -29,10 +29,7 @@ jobs:
 
       - name: Run tests
         run: npm test
-
-      - name: Build project
-        run: npm run build
-
+        
       - name: Deploy to AWS EC2
         if: success()
         uses: appleboy/scp-action@v0.1.7
