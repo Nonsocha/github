@@ -1,10 +1,10 @@
-const app = require('./server');
-const PORT = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
 
+app.use(express.static('public'));
 
-// Important: listen on 0.0.0.0 so EC2 can serve requests externally
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running on http://0.0.0.0:${PORT}`);
+app.get('/', (req, res) => {
+  res.status(200).send('Hello from Express server!');
 });
 
-module.exports = app; // Important for testing
+module.exports = app;
