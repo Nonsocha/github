@@ -1,10 +1,10 @@
 const request = require('supertest');
-const app = require('./server'); // Verify correct path to your app
+const app = require('./server');
 
 describe('GET /', () => {
-  it('should return Hello from Express server!', async () => {
+  it('should return Hello World', async () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
-    expect(res.text).toBe('Hello from Express server!'); // Use .toBe instead of .toContain
+    expect(res.text).toBe('Hello World');
   });
 });
