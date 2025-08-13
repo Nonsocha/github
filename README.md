@@ -78,7 +78,7 @@
 
   * Go to the local machine in the vs code terminal and paste the github url. 
     
-     ![git-clone](./image/git%20clone.PNG)
+     ![git-clone](./clone.PNG)
 
       
 ### 2. Create a simple Node.js Application
@@ -138,7 +138,7 @@ node server.js
 ```
 
 ![node](./image/local-host.PNG)
-![Browser](./image/Capture.PNG)
+![Browser](./image/capture.PNG)
 
 ## Step 3: Writing Your First GitHub Action Workflow
 
@@ -157,4 +157,5 @@ Example: node.js.yml
     touch .github/workflows/node.js.yml
    ```
    
+
 
