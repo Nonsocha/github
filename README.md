@@ -156,6 +156,41 @@ Example: node.js.yml
   ```
     touch .github/workflows/node.js.yml
    ```
-   
+### 3.3 Example Node.js GitHub Actions Workflow
+Open node.js.yml in a code editor and add the following content:
+   ```
+      name: Node.js CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+```
+
+
 
 
