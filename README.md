@@ -74,11 +74,12 @@
  Clone to the Local Machine
   
   *  Navigate to the code icon in the repository that has been created. Copy the url .
-    ![clone](./image/clone.PNG)    
+     ![clone](./image/clone.PNG)    
 
   * Go to the local machine in the vs code terminal and paste the github url. 
     
-      ![git-clone](./image/git%20clone.PNG)
+     ![git-clone](./image/git%20clone.PNG)
+
       
 ### 2. Create a simple Node.js Application
 
@@ -156,3 +157,4 @@ Example: node.js.yml
     touch .github/workflows/node.js.yml
    ```
    
+
